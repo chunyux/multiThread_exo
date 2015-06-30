@@ -69,14 +69,13 @@ int _tmain(int argc, _TCHAR* argv[])
 {	
 	
 	std::cout<<("The simplest example of multithread in the hello world: \n");
-    // Here state mySources
-	
+
 	hMutex = CreateMutexW(NULL,FALSE,(LPCWSTR)"text");
 
 	HANDLE handleWriting = CreateThread(NULL, 0, ThreadWriting, NULL, 0, NULL); 
-    HANDLE handleReading = CreateThread(NULL, 0, ThreadReading, NULL, 0, NULL);  
+    	HANDLE handleReading = CreateThread(NULL, 0, ThreadReading, NULL, 0, NULL);  
 	
-    getchar();
+    	getchar();
 	/*
 	CloseHandle(handlefun);
 	CloseHandle(handlenotfun);
